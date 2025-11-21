@@ -1,9 +1,10 @@
 /* Fullscreen wrapper for animated pages */
 .page-wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: auto;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
 /* Your original container stays the same */

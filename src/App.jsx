@@ -46,8 +46,9 @@ function App() {
     }),
   };
 
+
   return (
-    <main className="container">
+    <div className="page-wrapper">
       <AnimatePresence custom={direction}>
         <motion.div
           key={location.pathname}
@@ -59,20 +60,23 @@ function App() {
           transition={{ duration: 0.6 }}
           style={{ height: "100%" }}
         >
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/Project" element={<Project />} />
-            <Route path="/Services" element={<Service />} />
-            <Route path="/Contact" element={<Contact />} />
-          </Routes>
+          <div className="container">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<Home />} />
+              <Route path="/Project" element={<Project />} />
+              <Route path="/Services" element={<Service />} />
+              <Route path="/Contact" element={<Contact />} />
+            </Routes>
+
+            {/* Navigation */}
+            <div className="navigation">
+              <p className="nav-button" onClick={goPrev}>Prev</p>
+              <p className="nav-button" onClick={goNext}>Next</p>
+            </div>
+          </div>
         </motion.div>
       </AnimatePresence>
-
-      <div className="navigation">
-        <p className="nav-button" onClick={goPrev}>Prev</p>
-        <p className="nav-button" onClick={goNext}>Next</p>
-      </div>
-    </main>
+    </div>
   );
 }
 
