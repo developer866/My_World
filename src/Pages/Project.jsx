@@ -1,11 +1,18 @@
-import React from 'react'
+import { useState } from 'react'
 import './Project.css'
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 function Project() {
+  const [value, setValue] = useState(new Date());
+  console.log(value);
   return (
     <main className="project-page">
       <section className='project-aside'>
         <h4>Book service</h4>
+          <div className='calender'>
+            <Calendar onChange={setValue} value={value} />
+          </div>
         <form>
           <div>
             <label htmlFor="name">Name</label>
@@ -18,31 +25,90 @@ function Project() {
         </form>
       </section>
       <section className='project-content'>
-        <h4>
+        <h2>
           Project Page
-        </h4>
+        </h2>
         <div className='project-content-sub-container'>
           <div className="box">
-            <img src="" alt="client image" />
+            <img src="/Astro-bg.png" alt="client image" />
             <h5>client name</h5>
             <p>clients review </p>
-            <div>
-              <p>before</p>
-              <p>After</p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
             </div>
-
           </div>
-          <div className="box">box2</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
-          <div className="box">boxes</div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
+          <div className="box">
+            <img src="/Astro-bg.png" alt="client image" />
+            <h5>client name</h5>
+            <p>clients review </p>
+            <div className="navigation">
+              <p className="nav-button" >Prev</p>
+              <p className="nav-button" >Next</p>
+            </div>
+          </div>
+
         </div>
       </section>
     </main>
