@@ -1,0 +1,28 @@
+.project-page {
+  display: flex;
+  min-height: 80vh;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.project-content {
+  flex: 3;
+  padding: 20px;
+  /* font-size: 1.5rem; */
+  color: #333;
+  border: 1px solid green;
+}
+.project-aside {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid blue;
+  margin-right: 20px;
+}
+
+h4{
+    margin: 0;
+}
+.project-content-sub-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
