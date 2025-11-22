@@ -4,6 +4,16 @@
   justify-content: space-between;
   /* margin-top: 30px; */
 }
+@media (max-width: 600px) {
+  .project-page {
+    flex-direction: column;
+  }
+  .project-aside {
+    margin-right: 0;
+    margin-bottom: 20px;
+    display: none;
+  }
+}
 .project-content {
   flex: 4;
   padding: 20px;
@@ -11,7 +21,7 @@
   color: #333;
   border: 1px solid green;
   height: 80vh; /* lock container height */
-  overflow-y: auto; /* enable page scroll */
+  overflow-y:auto; /* enable page scroll */
   overflow-x: hidden; /* hide horizontal scroll */
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: #888 #e5e5e5;
@@ -51,15 +61,18 @@ h4 {
 .box {
   border: 1px solid red;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
+}
+@media (max-width: 600px) {
+  .project-content-sub-container {
+    grid-template-columns: 1fr;
+  }
 }
 .project-content img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-.calender {
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 20px;
 }

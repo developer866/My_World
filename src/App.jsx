@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence,motion} from "framer-motion";
 
 import Home from "./Pages/Home";
 import Project from "./Pages/Project";
@@ -70,8 +70,8 @@ function App() {
 
             {/* Navigation */}
             <div className="navigation">
-              <p className="nav-button" onClick={goPrev}>Prev</p>
-              <p className="nav-button" onClick={goNext}>Next</p>
+              <p className="nav-button" onClick={goPrev}>Prev Page</p>
+              <p className="nav-button" onClick={goNext}>Next Page</p>
             </div>
           </div>
         </motion.div>
