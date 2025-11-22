@@ -21,10 +21,19 @@
   color: #333;
   border: 1px solid green;
   height: 80vh; /* lock container height */
-  overflow-y:auto; /* enable page scroll */
+  overflow-y: auto; /* enable page scroll */
   overflow-x: hidden; /* hide horizontal scroll */
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: #888 #e5e5e5;
+}
+@media (max-width: 600px) {
+  .project-content {
+    max-height: 80vh;
+    overflow-y: auto; /* enable page scroll */
+    overflow-x: hidden; /* hide horizontal scroll */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #e5e5e5;
+  }
 }
 .project-aside {
   flex: 1;

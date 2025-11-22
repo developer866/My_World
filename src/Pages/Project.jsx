@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Project.css'
-
+import { motion } from 'framer-motion';
 
 
 function Project() {
