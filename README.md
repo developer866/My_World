@@ -1,4 +1,3 @@
-Here is the README **exactly in `.md` format`**, clean and ready to paste into your project:
 
 ```md
 # Navbar-Free Interactive Web Experience
@@ -11,7 +10,7 @@ The aim is to increase **user engagement**, improve **focus**, and create a **mo
 
 ## ✨ Features
 
-### 🚫 No Navigation Bar
+## 🚫 No Navigation Bar
 - The UI is intentionally built without a navbar to reduce distractions.
 - Users interact directly with the content on each screen.
 
