@@ -45,7 +45,7 @@ function Service() {
               <p>{selectedService.description}</p>
             </>
           ) : (
-            <p className="placeholder_text">Select a service to view details</p>
+            <h3 className="placeholder_text">Select a service to view details</h3>
           )}
         </div>
       </div>
