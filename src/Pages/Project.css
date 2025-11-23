@@ -68,8 +68,9 @@ h4 {
   margin: 0;
 }
 .project-content-sub-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  flex-wrap: wrap;
 }
 .box {
   /* border: 1px solid red; */
@@ -80,6 +81,7 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  flex: 1 1 200px;
 }
 .box:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
