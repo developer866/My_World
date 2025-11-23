@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Project.css'
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 
 
 function Project() {
@@ -82,23 +82,43 @@ function Project() {
 
   const [selectedProject, setSelectedProject] = useState(null);
 
+
+
   return (
     <main className="project-page">
+
+
       <section className='project-aside'>
-        {!selectedProject ? (
-          <>
-            <h2>Project detaiils </h2>
-            <p>Select a project to view details </p>
-          </>
-        ) : (<>
-          <p><span>Client:</span> {selectedProject.name}</p>
-          <p><span>Review:</span> {selectedProject.review}</p>
-          <p><span>Description:</span> {selectedProject.description}</p>
-          <p><span>Price:</span> {selectedProject.price}</p>
-          <p><span>Tech Stack:</span> {selectedProject.techStack.join(", ")}</p>
-        </>
-        )}
+        <AnimatePresence mode="wait">
+          {!selectedProject ? (
+            <motion.div
+              key="empty"
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 120, damping: 12 }}
+            >
+              <h2>Project details</h2>
+              <p>Select a project to view details</p>
+            </motion.div>
+          ) : (
+            <motion.div
+              key={selectedProject.id} // important for AnimatePresence to detect changes
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 120, damping: 12 }}
+            >
+              <p><span>Client:</span> {selectedProject.name}</p>
+              <p><span>Review:</span> {selectedProject.review}</p>
+              <p><span>Description:</span> {selectedProject.description}</p>
+              <p><span>Price:</span> {selectedProject.price}</p>
+              <p><span>Tech Stack:</span> {selectedProject.techStack.join(", ")}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
+
       <section className='project-content'>
         <h2>
           Project Page
@@ -109,9 +129,17 @@ function Project() {
             <div className="box" key={client.id} onClick={() => setSelectedProject(client)}>
               <div>
 
-                <img src={client.img} alt="client image" />
+                <motion.img
+                  src={client.img}
+                  alt="client image"
+                  whileHover={{ scale: 1.1, rotate: 2 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                />
                 <h5>{client.name}</h5>
-                <p>{client.review}</p>
+                {/* <p>{client.review}</p> */}
+                <p>{client.description}</p>
+                <p>{client.techStack+ " "}</p>
+                <p>{client.price}</p>
               </div>
 
               <div className="navigation">
@@ -122,6 +150,8 @@ function Project() {
           ))}
         </div>
       </section>
+
+
     </main>
   )
 }

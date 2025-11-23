@@ -6,13 +6,15 @@
   position: relative;
   margin: 0 auto;
 }
+
 @media (max-width: 768px) {
   .page-wrapper {
-    display: flex;
+    /* display: flex; */
     min-height: 80vh;
+    width: 100%;
   }
 }
-/* Your original container stays the same */
+/* Container to center content and limit max width */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -32,7 +34,6 @@
   margin-top: 20px;
 }
 
-
 .nav-button {
   padding: 10px;
   width: 25%;
@@ -41,7 +42,6 @@
   color: white;
   border-radius: 20px;
 }
-
 
 .nav-button:hover {
   background: grey;
