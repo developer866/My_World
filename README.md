@@ -6,7 +6,6 @@
 This project delivers an immersive, distraction-free web experience by **removing the navigation bar** and designing each page as a **full-screen (100vh) interactive screen**.  
 The aim is to increase **user engagement**, improve **focus**, and create a **modern, app-like flow** using clean vanilla CSS and smooth Framer Motion animations.
 
----
 
 ## ✨ Features
 
@@ -34,8 +33,6 @@ The aim is to increase **user engagement**, improve **focus**, and create a **mo
 - Fully responsive with clean typography and spacing.
 - Works seamlessly across mobile, tablet, and desktop.
 
----
-
 ## 🎯 Why Remove the Navbar?
 Removing the navbar improves the user experience by:
 
@@ -45,7 +42,6 @@ Removing the navbar improves the user experience by:
 - Encouraging natural exploration  
 - Allowing motion and content to guide navigation  
 
----
 
 ## 🧱 Tech Stack
 - **HTML**
@@ -54,11 +50,10 @@ Removing the navbar improves the user experience by:
 - **Framer Motion**
 - **Vite / Local Dev Tools (Optional)**
 
----
+
 
 ## 📁 Project Structure
 
-```
 
 /src
 /pages
@@ -69,7 +64,7 @@ index.js
 index.html
 README.md
 
-````
+
 
 ---
 
