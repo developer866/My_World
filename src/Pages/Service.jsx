@@ -13,7 +13,6 @@ function Service() {
     { title: "Hosting Setup", description: "We help you deploy, host, and manage your website." }
   ];
 
-
   const [selectedService, setSelectedService] = useState(null);
 
   return (

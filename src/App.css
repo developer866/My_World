@@ -1,7 +1,7 @@
 /* Fullscreen wrapper for animated pages */
 .page-wrapper {
   width: 90vw;
-  height: auto;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -19,6 +19,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex; 
+  flex-direction: column;
 }
 @media (max-width: 768px) {
   .container {

@@ -1,11 +1,12 @@
 .contact-container {
   display: flex;
   gap: 40px;
-  max-width: 1000px;
+  min-width: 80vw;
   margin: 20px auto;
   padding: 20px;
   flex-wrap: wrap;
   border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .contact-info {
