@@ -134,11 +134,12 @@ function Project() {
                   alt="client image"
                   whileHover={{ scale: 1.1, rotate: 2 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  width="100" height="50"
                 />
-                <h5>{client.name}</h5>
+                <h2>{client.name}</h2>
                 {/* <p>{client.review}</p> */}
                 <p>{client.description}</p>
-                <p>{client.techStack+ " "}</p>
+                <p>{client.techStack + " "}</p>
                 <p>{client.price}</p>
               </div>
 

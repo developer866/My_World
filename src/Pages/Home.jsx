@@ -20,7 +20,7 @@ function Home() {
 
       {/* Image */}
       <div className="hero-image">
-        <img src="Astro-bg.png" alt="my w" />
+        <img src="Astro-bg.png" alt="my w" width="640" height="360"/>
       </div>
     </main>
 
